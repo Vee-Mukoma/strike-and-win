@@ -9,6 +9,9 @@ const score = document.getElementById("score");
 const playerChoiceDisplay = document.getElementById("player-choice");
 const computerChoiceDisplay = document.getElementById("computer-choice");
 
+let playerScore = 0;
+let computerScore = 0;
+
 // Function to start the game
 startGame.addEventListener("click", function() {
     heroSection.classList.add("hidden");
@@ -30,11 +33,16 @@ function playGame(playerChoice) {
 
     if (playerChoice == "rock" && computerChoice == "scissors" || playerChoice == "scissors" && computerChoice == "paper" || playerChoice == "paper" && computerChoice == "rock") {
         result.textContent = "You win!";
+        playerScore++;
     } else if (playerChoice == computerChoice) {
         result.textContent = "It's a tie!";
     } else {
         result.textContent = "You lose";
+        computerScore++;
     }
+
+    // Update the score display
+    score.textContent = `Player: ${playerScore} - Computer: ${computerScore}`;
 }
 
 // Event listeners for player choices
