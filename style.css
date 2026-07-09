@@ -213,6 +213,9 @@ main {
   cursor: pointer;
   transition: var(--transition);
   width: 100%;
+  pointer-events: auto;
+  position: relative;
+  z-index: 10;
 }
 
 .button button:hover {
