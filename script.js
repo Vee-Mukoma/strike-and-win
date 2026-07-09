@@ -36,3 +36,16 @@ function playGame(playerChoice) {
         result.textContent = "You lose";
     }
 }
+
+// Event listeners for player choices
+rock.addEventListener("click", function() {
+    playGame("rock");
+});
+
+paper.addEventListener("click", function() {
+    playGame("paper");
+});
+
+scissors.addEventListener("click", function() {
+    playGame("scissors");
+});
